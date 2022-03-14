@@ -1,13 +1,17 @@
 <!DOCTYPE html>
+
+{% extends 'base.html' %}
 <html lang="en">
 <head>
-    
 </head>
 <body>
-    <form method="post">
-    {% csrf_token %}
-    {{form.as_p}}
-        <input type="submit" value="login">
+{% block 'container' %}
+    <form method = "post">
+        {% csrf_token %}
+        {{form.as_p}}
+        <input type = "submit" value = "login"></input>
     </form>
+    {% endblock 'container' %}
+    
 </body>
 </html>
