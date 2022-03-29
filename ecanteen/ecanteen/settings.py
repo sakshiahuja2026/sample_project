@@ -50,6 +50,7 @@ INSTALLED_APPS = [
     'simpleform',
     'crispy_forms',
     'UserApp',
+    'sendmail'
 ]
 
 MIDDLEWARE = [
@@ -144,3 +145,9 @@ LOGIN_REDIRECT_URL= "/admin"
 LOGOUT_REDIRECT_URL= "/admin"
 AUTH_USER_MODEL = 'UserApp.user'
 
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST='smtp.gmail.com'
+EMAIL_PORT=587
+EMAIL_USE_TLS='True'
+EMAIL_HOST_USER='ta5.sakshi.181130116002@gmail.com'
+EMAIL_HOST_PASSWORD='Aheights706'
